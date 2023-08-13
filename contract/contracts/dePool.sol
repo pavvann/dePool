@@ -18,6 +18,7 @@ contract dePool {
     }
 
     mapping (uint256 => address) public rideowner;
+    mapping (address => bool) public isRegistered;
     mapping (uint256 => mapping(uint256 => address)) public rideToRider;
     uint256 public ridecount = 0;
     ride[] public rides;
@@ -45,6 +46,7 @@ contract dePool {
         addressDetails[msg.sender].gender = _gender;
         addressDetails[msg.sender].age = _age;
         person.push(human(_name, _age, _gender));
+        isRegistered[msg.sender] = true;
     }
 
 

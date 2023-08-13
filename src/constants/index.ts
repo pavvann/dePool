@@ -1,3 +1,5 @@
-export const addresses = [
-    
-]
+export const addresses = {
+    84531: "0xd3E6f827BC5830C7Ad5ac8eB912308eEf850C8C7",
+    420: "0x6C4861469388027b8938509AebC585E0745cFA5E",
+    999: "0x47E910307300e492941E2D68Df981d177F5CD64D",
+}

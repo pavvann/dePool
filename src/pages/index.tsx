@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useAccount } from 'wagmi';
+import { useAccount, useNetwork } from 'wagmi';
 
 import Link from 'next/link';
 
@@ -21,6 +21,7 @@ const RenderCard = ({ label, link, image }: any) => {
 
 export default function Home() {
 	const { isConnected } = useAccount();
+	const { chain, chains } = useNetwork()
 
 	const renderButton = () => {
 		if (isConnected) {
@@ -47,7 +48,7 @@ export default function Home() {
 			<Head>
 				<title>deWheels</title>
 				<meta name="description" content="deWheels" />
-				<link rel="icon" href="/favicon.ico" />
+				<Link rel="icon" href="/favicon.ico" />
 			</Head>
 
 			<div>
